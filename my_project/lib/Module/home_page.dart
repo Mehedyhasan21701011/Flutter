@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/Module/about_page.dart';
+import 'package:my_project/Module/appbar.dart';
 import 'package:my_project/Module/button_view.dart';
 import 'package:my_project/Module/card_view.dart';
 import 'package:my_project/Module/cycle_avater.dart';
+import 'package:my_project/Module/expanded.dart';
+import 'package:my_project/Module/fitbox.dart';
+import 'package:my_project/Module/gride_View_count.dart';
+import 'package:my_project/Module/gride_view.dart';
 import 'package:my_project/Module/list_Tile.dart';
+import 'package:my_project/Module/bottomNavigation.dart';
+import 'package:my_project/Module/navbar.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -17,6 +24,13 @@ class HomePageView extends StatelessWidget {
       {'title': "Cycle Avater", 'pageName': const CycleAvater()},
       {'title': "List Tile", 'pageName': const ListTileGuideline()},
       {'title': "Button Guideline", 'pageName': const ButtonView()},
+      {'title': "Gride view", 'pageName': const GrideView()},
+      {'title': "Gride view Count", 'pageName': const GridViewCountPage()},
+      {'title': "Expanded", 'pageName': const ExpandedExample()},
+      {'title': "Fitbox", 'pageName': const Fitbox()},
+      {'title': "Appbars", 'pageName': const AppbarView()},
+      {'title': "Bottomnavigation", 'pageName': const Bottomnavigation()},
+      {'title': "NavBar", 'pageName': const Navbar()},
     ];
     return Scaffold(
       appBar: AppBar(
@@ -37,10 +51,17 @@ class HomePageView extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               margin: const EdgeInsets.all(5),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Colors.grey[200],
-              ),
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.grey[200],
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 4, color: Colors.grey, offset: Offset(2, 2))
+                  ]),
               child: ListTile(
+                leading: const Icon(
+                  Icons.widgets,
+                  color: Colors.green,
+                ),
                 title: Text(
                   page[index]['title'],
                   style: const TextStyle(

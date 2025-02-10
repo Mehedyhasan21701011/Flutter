@@ -14,7 +14,7 @@ class CycleAvater extends StatelessWidget {
           radius: 80,
           backgroundColor: Colors.blue,
           child: Padding(
-            padding: EdgeInsets.all(5.0),
+            padding: EdgeInsets.all(10.0),
             child: CircleAvatar(
               radius: 78,
               backgroundImage: AssetImage('assets/images/shoe_1.png'),
