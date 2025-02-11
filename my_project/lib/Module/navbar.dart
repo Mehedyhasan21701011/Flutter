@@ -33,15 +33,24 @@ class _NavbarState extends State<Navbar> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  icon: const Icon(Icons.home, size: 40),
+                  icon: const Icon(
+                    Icons.home,
+                    size: 40,
+                    color: Colors.white,
+                  ),
                   onPressed: () => _updateText("Home"),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.search, size: 40),
+                  icon: const Icon(
+                    Icons.search,
+                    size: 40,
+                    color: Colors.white,
+                  ),
                   onPressed: () => _updateText("Search"),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.settings, size: 40),
+                  icon:
+                      const Icon(Icons.settings, size: 40, color: Colors.white),
                   onPressed: () => _updateText("Settings"),
                 ),
               ],

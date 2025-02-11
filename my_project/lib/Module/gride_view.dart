@@ -12,7 +12,7 @@ class GrideView extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
-          itemCount: 12,
+          itemCount: 13,
           itemBuilder: (context, index) {
             return Container(
               decoration: BoxDecoration(

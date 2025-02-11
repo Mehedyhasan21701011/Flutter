@@ -3,14 +3,17 @@ import 'package:my_project/Module/about_page.dart';
 import 'package:my_project/Module/appbar.dart';
 import 'package:my_project/Module/button_view.dart';
 import 'package:my_project/Module/card_view.dart';
+import 'package:my_project/Module/containersetcontainer.dart';
 import 'package:my_project/Module/cycle_avater.dart';
 import 'package:my_project/Module/expanded.dart';
 import 'package:my_project/Module/fitbox.dart';
 import 'package:my_project/Module/gride_View_count.dart';
 import 'package:my_project/Module/gride_view.dart';
+import 'package:my_project/Module/imagefit.dart';
 import 'package:my_project/Module/list_Tile.dart';
 import 'package:my_project/Module/bottomNavigation.dart';
 import 'package:my_project/Module/navbar.dart';
+import 'package:my_project/Module/tab_control.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -31,6 +34,12 @@ class HomePageView extends StatelessWidget {
       {'title': "Appbars", 'pageName': const AppbarView()},
       {'title': "Bottomnavigation", 'pageName': const Bottomnavigation()},
       {'title': "NavBar", 'pageName': const Navbar()},
+      {'title': "Tab Controler", 'pageName': const TabControl()},
+      {'title': "imagefit", 'pageName': const Imagefit()},
+      {
+        'title': "Containersetcontainer",
+        'pageName': const Containersetcontainer()
+      },
     ];
     return Scaffold(
       appBar: AppBar(
