@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_project/Module/Routes/senddata.dart';
+import 'package:my_project/Module/ScrolingGuide.dart';
 import 'package:my_project/Module/about_page.dart';
 import 'package:my_project/Module/appbar.dart';
+import 'package:my_project/Module/arrayExample.dart';
 import 'package:my_project/Module/button_view.dart';
 import 'package:my_project/Module/card_view.dart';
 import 'package:my_project/Module/containersetcontainer.dart';
@@ -13,6 +16,8 @@ import 'package:my_project/Module/imagefit.dart';
 import 'package:my_project/Module/list_Tile.dart';
 import 'package:my_project/Module/bottomNavigation.dart';
 import 'package:my_project/Module/navbar.dart';
+import 'package:my_project/Module/overlap.dart';
+import 'package:my_project/Module/spacer.dart';
 import 'package:my_project/Module/tab_control.dart';
 
 class HomePageView extends StatelessWidget {
@@ -36,6 +41,11 @@ class HomePageView extends StatelessWidget {
       {'title': "NavBar", 'pageName': const Navbar()},
       {'title': "Tab Controler", 'pageName': const TabControl()},
       {'title': "imagefit", 'pageName': const Imagefit()},
+      {'title': "Array Example", 'pageName': const Arrayexample()},
+      {'title': "Spacer Example", 'pageName': const SpacerGuide()},
+      {'title': "SCroling GUide", 'pageName': Scrolingguide()},
+      {'title': "Sending data", 'pageName': FirstScreen()},
+      {'title': "Overlap Guide", 'pageName': OverlapGuide()},
       {
         'title': "Containersetcontainer",
         'pageName': const Containersetcontainer()

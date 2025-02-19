@@ -5,6 +5,11 @@ class Bodysetting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text(
+        "Setting page.....",
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+      ),
+    );
   }
 }
