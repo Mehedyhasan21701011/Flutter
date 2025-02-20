@@ -6,6 +6,7 @@ import 'package:my_project/Module/appbar.dart';
 import 'package:my_project/Module/arrayExample.dart';
 import 'package:my_project/Module/button_view.dart';
 import 'package:my_project/Module/card_view.dart';
+import 'package:my_project/Module/class13/dartbasic.dart';
 import 'package:my_project/Module/containersetcontainer.dart';
 import 'package:my_project/Module/cycle_avater.dart';
 import 'package:my_project/Module/expanded.dart';
@@ -50,6 +51,7 @@ class HomePageView extends StatelessWidget {
         'title': "Containersetcontainer",
         'pageName': const Containersetcontainer()
       },
+      {'title': "Dart Basic Guide", 'pageName': Dartbasic()},
     ];
     return Scaffold(
       appBar: AppBar(
