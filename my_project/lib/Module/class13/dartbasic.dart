@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class Dartbasic extends StatelessWidget {
@@ -16,9 +18,11 @@ class Dartbasic extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   // mPrint();
-                  mVariables();
-                  mList();
-                  nMap();
+                  // mVariables();
+                  // mList();
+                  // nMap();
+                  nVariables();
+                  nList();
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -39,52 +43,74 @@ class Dartbasic extends StatelessWidget {
     );
   }
 
-  void mPrint() {
-    print("I am print function");
-  }
-
-  void mVariables() {
-    // final name = "Mehedy";
-    // final name = "hasan";
-    // const String name = "Mehedy";
-    // const String name = "Hasan";
-    // differences between final and const ,final is without datatypes on the other hand const is with datatypes
-    // we cann't change final or const variable value
-
-    int? a;
+  void nVariables() {
+    var a;
+    a = "Mehedy";
     a = 10;
-    print(a == null ? "This is null" : "Ok");
+    print(a);
+    print(a.runtimeType);
 
-    DateTime date1 = DateTime.now();
-    print(date1);
-    final DateTime date = DateTime.now();
-    print(date);
-
-    String num1 = '12345';
-
-    print(num.parse(num1));
+    var b;
+    b = int.parse("1234");
+    print(b);
+    String? name = stdin.readLineSync();
+    print("$name"); // null safety in name string
   }
 
-  void mList() {
-    List<String> list = ["a", "b", "c", "d", "e"];
+  void nList() {
+    List<String> list = List<String>.filled(5, "default");
+    list[0] = "Mehedy";
+    list[1] = "Hasan";
+    list[2] = "Jalal";
     print(list);
-    for (int i = 0; i < list.length; i++) {
-      print(list[i] == "a" ? "Ok" : "NOt Ok");
-    }
-    for (var element in list) {
-      if (element == "a") {
-        print("ok");
-      } else {
-        print("Not Ok");
-      }
-    }
   }
 
-  void nMap() {
-    Map<String, dynamic> map = {
-      "name": "Mehedy",
-      "age": 25,
-      "city": "Dhaka",
-    };
-  }
+  // void mPrint() {
+  //   print("I am print function");
+  // }
+
+  // void mVariables() {
+  //   // final name = "Mehedy";
+  //   // final name = "hasan";
+  //   // const String name = "Mehedy";
+  //   // const String name = "Hasan";
+  //   // differences between final and const ,final is without datatypes on the other hand const is with datatypes
+  //   // we cann't change final or const variable value
+
+  //   int? a;
+  //   a = 10;
+  //   print(a == null ? "This is null" : "Ok");
+
+  //   DateTime date1 = DateTime.now();
+  //   print(date1);
+  //   final DateTime date = DateTime.now();
+  //   print(date);
+
+  //   String num1 = '12345';
+
+  //   print(num.parse(num1));
+  // }
+
+  // void mList() {
+  //   List<String> list = ["a", "b", "c", "d", "e"];
+  //   print(list);
+  //   for (int i = 0; i < list.length; i++) {
+  //     print(list[i] == "a" ? "Ok" : "NOt Ok");
+  //   }
+  //   for (var element in list) {
+  //     if (element == "a") {
+  //       print("ok");
+  //     } else {
+  //       print("Not Ok");
+  //     }
+  //   }
+  // }
+
+  // void nMap() {
+  //   Map<String, dynamic> map = {
+  //     "name": "Mehedy",
+  //     "age": 25,
+  //     "city": "Dhaka",
+  //   };
+  // }
 }

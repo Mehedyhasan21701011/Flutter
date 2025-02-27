@@ -1,3 +1,4 @@
+import 'package:demo_project/module/welcome.dart';
 import 'package:demo_project/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      home: Welcome(),
     );
   }
 }

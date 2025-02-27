@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Module/class_5/cart.dart';
 
 class Bodycontainhome extends StatelessWidget {
   const Bodycontainhome({super.key});
@@ -106,12 +107,16 @@ class Bodycontainhome extends StatelessWidget {
             itemCount: 8,
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Cart()));
+                },
                 borderRadius: BorderRadius.circular(12),
                 splashColor: Colors.blue.withOpacity(0.3),
                 highlightColor: Colors.blue.withOpacity(0.1),
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 4.0,left: 8,right: 8),
+                  padding:
+                      const EdgeInsets.only(bottom: 4.0, left: 8, right: 8),
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -143,14 +148,16 @@ class Bodycontainhome extends StatelessWidget {
                                   child: const Text(
                                     "Fruits",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold, fontSize: 18),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 8.0),
                                   child: Row(
                                     children: const [
-                                      Text("3.9", style: TextStyle(fontSize: 12)),
+                                      Text("3.9",
+                                          style: TextStyle(fontSize: 12)),
                                       SizedBox(width: 8),
                                       Icon(Icons.star,
                                           color: Colors.yellow, size: 16),

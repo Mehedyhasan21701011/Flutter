@@ -18,6 +18,7 @@ class Textfieldtheme {
     ),
     contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
   );
+  
   static InputDecorationTheme darkTextFieldTheme = InputDecorationTheme(
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
