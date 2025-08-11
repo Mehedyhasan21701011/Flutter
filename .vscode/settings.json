@@ -3,5 +3,6 @@
     "files.autoSaveDelay": 500,
     "dart.flutterHotReloadOnSave": "all",
     "dart.hotReloadOnSave": "all",
-    "dart.previewHotReloadOnSaveWatcher": true
+    "dart.previewHotReloadOnSaveWatcher": true,
+    "cmake.sourceDirectory": "E:/FLUTTER/demo_project/linux"
 }

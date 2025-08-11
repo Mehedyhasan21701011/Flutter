@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 
 class Cart extends StatelessWidget {
   const Cart({super.key});
@@ -178,25 +179,32 @@ class _ExpandableTextState extends State<ExpandableText> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          isExpanded || !shouldTruncate
-              ? widget.text
-              : widget.text.substring(0, widget.maxLength) + "...",
-          style: TextStyle(fontSize: 16.0),
-          softWrap: true,
-        ),
-        if (shouldTruncate) // Only show "Show more" if truncation is applied
-          InkWell(
-            onTap: () {
-              setState(() {
-                isExpanded = !isExpanded;
-              });
-            },
-            child: Text(
-              isExpanded ? "Show less" : "Show more",
-              style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
-            ),
-          ),
+        // Text(
+        //   isExpanded || !shouldTruncate
+        //       ? widget.text
+        //       : widget.text.substring(0, widget.maxLength) + "...",
+        //   style: TextStyle(fontSize: 16.0),
+        //   softWrap: true,
+        // ),
+        // if (shouldTruncate) // Only show "Show more" if truncation is applied
+        //   InkWell(
+        //     onTap: () {
+        //       setState(() {
+        //         isExpanded = !isExpanded;
+        //       });
+        //     },
+        //     child: Text(
+        //       isExpanded ? "Show less" : "Show more",
+        //       style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+        //     ),
+        //   ),
+        // ReadMoreText(
+        //   "Product er description text......bla blaa",
+        //               trimLines: 3,
+        //               trimMode: TrimMode.Line,
+        //               trimCollapsedText: ' See more',
+        //               trimExpandedText: ' Less',
+        // ),
       ],
     );
   }

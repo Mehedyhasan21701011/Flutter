@@ -1,9 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:myapp/Module/class15_19/themecontroler.dart';
 import 'package:myapp/Module/class_4/bodycontainhome.dart';
 import 'package:myapp/Module/class_4/bodynotification.dart';
 import 'package:myapp/Module/class_4/bodysetting.dart';
+import 'package:provider/provider.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -22,6 +22,9 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
+    var themeController =
+        Provider.of<Themecontroler>(context); // Access theme controller
+
     return Scaffold(
       appBar: AppBar(
         leading: Builder(
@@ -68,12 +71,6 @@ class _HomepageState extends State<Homepage> {
               Icons.account_circle,
               size: 32,
             ),
-            // child: CircleAvatar(
-            //   backgroundColor: Colors.blue,
-
-            //   // backgroundImage: AssetImage("assets/Images/Cart.png"),
-            //   radius: 14,
-            // ),
           ),
           SizedBox(width: 10),
         ],
@@ -89,7 +86,11 @@ class _HomepageState extends State<Homepage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                      child: FittedBox(fit: BoxFit.fill, child: Icon(Icons.account_circle,)),
+                      child: FittedBox(
+                          fit: BoxFit.fill,
+                          child: Icon(
+                            Icons.account_circle,
+                          )),
                     ),
                     Expanded(
                       child: Column(
@@ -123,7 +124,38 @@ class _HomepageState extends State<Homepage> {
             ListTile(
               leading: const Icon(Icons.mode),
               title: const Text("Theme"),
-              onTap: () => Navigator.pop(context),
+              trailing: PopupMenuButton<String>(
+                icon: const Icon(Icons.arrow_drop_down), // Dropdown icon
+                onSelected: (value) {
+                  if (value == "light") {
+                    themeController.setTheme(ThemeMode.light);
+                  } else if (value == "dark") {
+                    themeController.setTheme(ThemeMode.dark);
+                  }
+                },
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    value: "light",
+                    child: Row(
+                      children: [
+                        Icon(Icons.wb_sunny, color: Colors.orange),
+                        SizedBox(width: 10),
+                        Text("Light Theme"),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: "dark",
+                    child: Row(
+                      children: [
+                        Icon(Icons.nightlight_round, color: Colors.blueGrey),
+                        SizedBox(width: 10),
+                        Text("Dark Theme"),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             Divider(),
             Spacer(),

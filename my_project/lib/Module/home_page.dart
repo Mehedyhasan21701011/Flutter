@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/Module/Routes/senddata.dart';
 import 'package:my_project/Module/ScrolingGuide.dart';
+import 'package:my_project/Module/Stack/stack.dart';
 import 'package:my_project/Module/about_page.dart';
 import 'package:my_project/Module/appbar.dart';
 import 'package:my_project/Module/arrayExample.dart';
 import 'package:my_project/Module/button_view.dart';
 import 'package:my_project/Module/card_view.dart';
+import 'package:my_project/Module/carosoule_slide.dart';
+import 'package:my_project/Module/class%2015-19/getex/gethome.dart';
+import 'package:my_project/Module/class%2015-19/statemanagementcontrolar.dart';
+import 'package:my_project/Module/class%2015-19/statemangement.dart';
 import 'package:my_project/Module/class13/dartbasic.dart';
 import 'package:my_project/Module/containersetcontainer.dart';
 import 'package:my_project/Module/cycle_avater.dart';
@@ -44,14 +49,19 @@ class HomePageView extends StatelessWidget {
       {'title': "imagefit", 'pageName': const Imagefit()},
       {'title': "Array Example", 'pageName': const Arrayexample()},
       {'title': "Spacer Example", 'pageName': const SpacerGuide()},
-      {'title': "SCroling GUide", 'pageName': Scrolingguide()},
+      {'title': "SCroling GUide", 'pageName': ScrollingGuide()},
       {'title': "Sending data", 'pageName': FirstScreen()},
       {'title': "Overlap Guide", 'pageName': OverlapGuide()},
+      {'title': "State Management Guide", 'pageName': Statemangement()},
       {
         'title': "Containersetcontainer",
         'pageName': const Containersetcontainer()
       },
       {'title': "Dart Basic Guide", 'pageName': Dartbasic()},
+      {'title': "state controler", 'pageName': Statemanagementcontrolar()},
+      {'title': "Getex Guide", 'pageName': Gethome()},
+      {'title': "Stack Guide", 'pageName': StackView()},
+      {'title': "Carousole Guide", 'pageName': CarosouleSlide()},
     ];
     return Scaffold(
       appBar: AppBar(
