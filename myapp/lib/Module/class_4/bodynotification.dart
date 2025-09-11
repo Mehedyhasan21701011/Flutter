@@ -5,7 +5,7 @@ class Bodynotification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text(
         "No notification.....",
         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),

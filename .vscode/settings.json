@@ -4,5 +4,8 @@
     "dart.flutterHotReloadOnSave": "all",
     "dart.hotReloadOnSave": "all",
     "dart.previewHotReloadOnSaveWatcher": true,
-    "cmake.sourceDirectory": "E:/FLUTTER/demo_project/linux"
+    "cmake.sourceDirectory": "E:/FLUTTER/demo_project/linux",
+    "python.analysis.extraPaths": [
+        "./PROJECT/pyquotex"
+    ]
 }

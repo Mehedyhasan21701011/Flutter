@@ -9,7 +9,7 @@ void main() {
     providers: [
       ChangeNotifierProvider(create: (context) => Countcontrollar(0))
     ],
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 

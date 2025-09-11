@@ -10,7 +10,7 @@ class Cart extends StatelessWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            icon: Icon(Icons.favorite_border_sharp),
+            icon: const Icon(Icons.favorite_border_sharp),
             iconSize: 30,
             onPressed: () {},
           ),
@@ -22,15 +22,15 @@ class Cart extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 250, // Set a fixed height for proper rendering
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/Images/Shoee.png"),
                 fit: BoxFit.cover, // Adjusts image within the container
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 8.0, right: 8),
+          const Padding(
+            padding: EdgeInsets.only(left: 8.0, right: 8),
             child: Row(
               children: [
                 Icon(Icons.star, size: 30, color: Colors.yellow),
@@ -56,8 +56,8 @@ class Cart extends StatelessWidget {
                     color: Colors.orange,
                   ),
                 ),
-                SizedBox(width: 10),
-                Text(
+                const SizedBox(width: 10),
+                const Text(
                   "\$100",
                   style: TextStyle(
                     decoration: TextDecoration.lineThrough,
@@ -65,23 +65,23 @@ class Cart extends StatelessWidget {
                     decorationThickness: 2.0,
                   ),
                 ),
-                SizedBox(width: 10),
-                Text(
+                const SizedBox(width: 10),
+                const Text(
                   "\$80.0",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0),
             child: Text(
               "Green Air Shoe",
               style: TextStyle(fontSize: 20),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0),
             child: Row(
               children: [
                 Text("Status:", style: TextStyle(fontWeight: FontWeight.bold)),
@@ -94,9 +94,9 @@ class Cart extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.only(left: 16.0),
+          const SizedBox(height: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0),
             child: Text(
               "Description:",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -109,20 +109,20 @@ class Cart extends StatelessWidget {
                   "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             color: const Color.fromRGBO(89, 33, 33, 0.122),
             padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Expanded(
+                const Expanded(
                   flex: 8,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Icon(Icons.remove_circle, size: 40, color: Colors.grey),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        padding: EdgeInsets.symmetric(horizontal: 8),
                         child: Text("5", style: TextStyle(fontSize: 18)),
                       ),
                       Icon(Icons.add_circle, size: 40),
@@ -142,7 +142,7 @@ class Cart extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           "Add to cart",
                           style: TextStyle(color: Colors.white),
                         ),
@@ -163,7 +163,7 @@ class ExpandableText extends StatefulWidget {
   final String text;
   final int maxLength;
 
-  ExpandableText({required this.text, this.maxLength = 100});
+  const ExpandableText({super.key, required this.text, this.maxLength = 100});
 
   @override
   _ExpandableTextState createState() => _ExpandableTextState();
@@ -176,7 +176,7 @@ class _ExpandableTextState extends State<ExpandableText> {
   Widget build(BuildContext context) {
     bool shouldTruncate = widget.text.length > widget.maxLength;
 
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Text(

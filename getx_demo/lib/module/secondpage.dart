@@ -10,7 +10,7 @@ class Secondpage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Center(child: Text('Second Page')),
+        title: const Center(child: Text('Second Page')),
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Center(
@@ -19,18 +19,18 @@ class Secondpage extends StatelessWidget {
                 Provider.of<Countcontrollar>(context, listen: false)
                     .decrement();
               },
-              child: Text("Decrement")),
+              child: const Text("Decrement")),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Center(child: Text('This is the second page')),
+        const Center(child: Text('This is the second page')),
       ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pop(context);
         },
-        child: Icon(Icons.arrow_back),
+        child: const Icon(Icons.arrow_back),
       ),
     );
   }

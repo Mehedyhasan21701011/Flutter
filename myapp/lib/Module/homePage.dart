@@ -80,9 +80,9 @@ class _HomepageState extends State<Homepage> {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.blue.shade300),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
@@ -134,7 +134,7 @@ class _HomepageState extends State<Homepage> {
                   }
                 },
                 itemBuilder: (context) => [
-                  PopupMenuItem(
+                  const PopupMenuItem(
                     value: "light",
                     child: Row(
                       children: [
@@ -144,7 +144,7 @@ class _HomepageState extends State<Homepage> {
                       ],
                     ),
                   ),
-                  PopupMenuItem(
+                  const PopupMenuItem(
                     value: "dark",
                     child: Row(
                       children: [
@@ -157,8 +157,8 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
-            Divider(),
-            Spacer(),
+            const Divider(),
+            const Spacer(),
             Container(
               child: ListTile(
                 leading: const Icon(Icons.logout, color: Colors.red),

@@ -14,7 +14,7 @@ class Myhomepage extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.blue.shade300,
-        title: Text(
+        title: const Text(
           "First Page",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
@@ -23,28 +23,28 @@ class Myhomepage extends StatelessWidget {
         Consumer<Countcontrollar>(builder: (context, Countcontrollar, child) {
           return Text(
             'Counter: ${Countcontrollar.count}',
-            style: TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.black),
           );
         }),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         ElevatedButton(
             onPressed: () {
               Provider.of<Countcontrollar>(context, listen: false).increment();
             },
-            child: Text("Add")),
-        SizedBox(
+            child: const Text("Add")),
+        const SizedBox(
           height: 10,
         ),
         Center(
           child: ElevatedButton(
               onPressed: () {
-                Get.to(Secondpage());
+                Get.to(const Secondpage());
               },
-              child: Text("Getx Route")),
+              child: const Text("Getx Route")),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Center(
@@ -55,17 +55,17 @@ class Myhomepage extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (BuildContext context) => const Secondpage()));
               },
-              child: Text("Navigator Route")),
+              child: const Text("Navigator Route")),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Center(
             child: ElevatedButton(
                 onPressed: () {
-                  Get.to(Notepad());
+                  Get.to(const Notepad());
                 },
-                child: Text("Note")))
+                child: const Text("Note")))
       ]),
     );
   }

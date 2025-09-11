@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1010877329943",
+    "project_id": "cerdentials",
+    "storage_bucket": "cerdentials.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010877329943:android:efc3166d5b434af2e6e252",
+        "android_client_info": {
+          "package_name": "com.example.cerdential"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhNnGeqsTQodx8wfEPzg3MPD-6v_7tt4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010877329943:android:0c03c12c27c421f2e6e252",
+        "android_client_info": {
+          "package_name": "com.example.demo_project_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhNnGeqsTQodx8wfEPzg3MPD-6v_7tt4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010877329943:android:27e9f11f8d3b5679e6e252",
+        "android_client_info": {
+          "package_name": "com.example.parking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhNnGeqsTQodx8wfEPzg3MPD-6v_7tt4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

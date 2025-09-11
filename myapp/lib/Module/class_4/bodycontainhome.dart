@@ -26,13 +26,13 @@ class Bodycontainhome extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                TextButton(onPressed: () {}, child: Text("View all"))
+                TextButton(onPressed: () {}, child: const Text("View all"))
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Container(
+            child: SizedBox(
               height: 120,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -107,7 +107,7 @@ class Bodycontainhome extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                TextButton(onPressed: () {}, child: Text("View all"))
+                TextButton(onPressed: () {}, child: const Text("View all"))
               ],
             ),
           ),
@@ -126,7 +126,7 @@ class Bodycontainhome extends StatelessWidget {
                 return InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Cart()));
+                        MaterialPageRoute(builder: (context) => const Cart()));
                   },
                   borderRadius: BorderRadius.circular(12),
                   splashColor: Colors.blue.withOpacity(0.3),
@@ -174,10 +174,10 @@ class Bodycontainhome extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 8.0),
+                                  const Padding(
+                                    padding: EdgeInsets.only(left: 8.0),
                                     child: Row(
-                                      children: const [
+                                      children: [
                                         Text("3.9",
                                             style: TextStyle(fontSize: 12)),
                                         SizedBox(width: 8),
@@ -213,9 +213,9 @@ class Bodycontainhome extends StatelessWidget {
                                 Expanded(
                                   flex: 2,
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Colors.black,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(8),
                                         bottomRight: Radius.circular(10),
                                       ),
