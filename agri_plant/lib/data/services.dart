@@ -2,12 +2,12 @@ import '../models/service.dart';
 
 List<Service> services = [
   const Service(
-    name: "Seeds",
-    image: "assets/services/seeds.jpg",
+    name: "Planting Guide",
+    image: "assets/services/seed.jpeg",
   ),
   const Service(
     name: "Seedlings",
-    image: "assets/services/seedlings.jpg",
+    image: "assets/services/seed2.jpeg",
   ),
   const Service(
     name: "Machinery",
@@ -23,6 +23,18 @@ List<Service> services = [
   ),
   const Service(
     name: "Crop disease solution",
-    image: "assets/services/crop_disease.jpg",
+    image: "assets/services/disease.jpeg",
+  ),
+  const Service(
+    name: "Crop disease 5solution",
+    image: "assets/services/disease2.jpeg",
+  ),
+  const Service(
+    name: "Insects control",
+    image: "assets/services/insects.jpeg",
+  ),
+  const Service(
+    name: "Insects control",
+    image: "assets/services/insects2.jpeg",
   ),
 ];

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:agriplant/data/services.dart';
+import 'package:agriplant/pages/planting.dart';
 import 'package:flutter/material.dart';
 
 class ServicesPage extends StatelessWidget {
@@ -19,31 +20,51 @@ class ServicesPage extends StatelessWidget {
           mainAxisSpacing: 14,
         ),
         itemBuilder: (context, index) {
-          return Container(
-            alignment: Alignment.bottomCenter,
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: AssetImage(services[index].image),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(5),
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
-                    borderRadius: const BorderRadius.all(Radius.circular(5)),
+          final service = services[index];
+
+          return GestureDetector(
+            onTap: () {
+              if (true) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const RadishPlantingGuidePage(),
                   ),
-                  child: Text(
-                    services[index].name,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                );
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                      content: Text('${service.name} page not available yet')),
+                );
+              }
+            },
+            child: Container(
+              alignment: Alignment.bottomCenter,
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: AssetImage(service.image),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.2),
+                      borderRadius: const BorderRadius.all(Radius.circular(5)),
+                    ),
+                    child: Text(
+                      service.name,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),

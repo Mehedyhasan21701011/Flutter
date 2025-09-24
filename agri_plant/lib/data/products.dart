@@ -11,10 +11,37 @@ List<Product> products = [
     rating: 4.35,
   ),
   const Product(
-    name: "Fresh Fruits",
+    name: "Radish",
     description:
         "Indulge in the natural sweetness and goodness of our handpicked assortment of fresh fruits. Bursting with flavors and packed with nutrients, these delectable treats are ect for snacking, cooking, or adding a vibrant touch to your meals.",
-    image: 'assets/fruit.jpg',
+    image: 'assets/radish.jpg',
+    price: 9.99,
+    unit: 'kg',
+    rating: 3.86,
+  ),
+  const Product(
+    name: "Radish",
+    description:
+        "Indulge in the natural sweetness and goodness of our handpicked assortment of fresh fruits. Bursting with flavors and packed with nutrients, these delectable treats are ect for snacking, cooking, or adding a vibrant touch to your meals.",
+    image: 'assets/radish2.jpg',
+    price: 9.99,
+    unit: 'kg',
+    rating: 3.86,
+  ),
+  const Product(
+    name: "Red Radish",
+    description:
+        "Indulge in the natural sweetness and goodness of our handpicked assortment of fresh fruits. Bursting with flavors and packed with nutrients, these delectable treats are ect for snacking, cooking, or adding a vibrant touch to your meals.",
+    image: 'assets/redradish.jpg',
+    price: 9.99,
+    unit: 'kg',
+    rating: 3.86,
+  ),
+  const Product(
+    name: "Red Radish",
+    description:
+        "Indulge in the natural sweetness and goodness of our handpicked assortment of fresh fruits. Bursting with flavors and packed with nutrients, these delectable treats are ect for snacking, cooking, or adding a vibrant touch to your meals.",
+    image: 'assets/redradish2.jpg',
     price: 9.99,
     unit: 'kg',
     rating: 3.86,
@@ -45,14 +72,5 @@ List<Product> products = [
     price: 14.77,
     unit: 'piece',
     rating: 5.0,
-  ),
-  const Product(
-    name: "Juicy Tomatoes",
-    description:
-        "Add a pop of color and flavor to your dishes with our juicy tomatoes. Grown with care, these plump and succulent tomatoes are a kitchen staple. Whether you're making sauces, salads, or sandwiches, these tomatoes are the key to culinary delight.",
-    image: 'assets/tomato.jpg',
-    price: 6.84,
-    unit: 'kg',
-    rating: 3.22,
   ),
 ];

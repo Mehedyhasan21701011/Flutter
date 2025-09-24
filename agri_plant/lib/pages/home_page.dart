@@ -1,4 +1,3 @@
-
 import 'package:agriplant/pages/cart_page.dart';
 import 'package:agriplant/pages/explore_page.dart';
 import 'package:agriplant/pages/profile_page.dart';
@@ -41,7 +40,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hi Wilson 👋🏾",
+              "Hi Mehedy 👋🏾",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             Text(
